@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="RWTViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="WSr-QE-YxW"/>
+                        <viewControllerLayoutGuide type="bottom" id="eJp-QN-cvN"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b0b-eU-2ht">
+                                <rect key="frame" x="183" y="329.5" width="8" height="8"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="8" id="HRs-TH-9uh"/>
+                                    <constraint firstAttribute="height" constant="8" id="dmK-tv-Ucm"/>
+                                </constraints>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="goldfish_feature.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Xbw-LG-QaA">
+                                <rect key="frame" x="37" y="238" width="300" height="191"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="NRr-fL-KfC"/>
+                                    <constraint firstAttribute="height" constant="191" id="dQ6-EW-04G"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1iv-vj-gAS">
+                                <rect key="frame" x="183" y="329" width="8" height="8"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="8" id="BQc-z6-u1F"/>
+                                    <constraint firstAttribute="width" constant="8" id="Fo8-zX-hfB"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="Xbw-LG-QaA" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="5rV-Ay-bqa"/>
+                            <constraint firstItem="Xbw-LG-QaA" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="centerY" id="GhU-cb-IF2"/>
+                            <constraint firstItem="b0b-eU-2ht" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="centerY" id="SrV-cL-86o"/>
+                            <constraint firstItem="1iv-vj-gAS" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="centerY" id="iyS-9R-WEG"/>
+                            <constraint firstItem="b0b-eU-2ht" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="tZa-yU-vx5"/>
+                            <constraint firstItem="1iv-vj-gAS" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="ysd-aq-394"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="9nq-P3-ZB0" appends="YES" id="KfH-de-6eC"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="blueSquare" destination="b0b-eU-2ht" id="asg-NW-6uL"/>
+                        <outlet property="image" destination="Xbw-LG-QaA" id="EFH-38-LlU"/>
+                        <outlet property="redSquare" destination="1iv-vj-gAS" id="rjQ-c3-N9k"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="9nq-P3-ZB0">
+                    <connections>
+                        <action selector="handleAttachmentGesture:" destination="vXZ-lx-hvc" id="QtN-Eo-6Dq"/>
+                    </connections>
+                </panGestureRecognizer>
+            </objects>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="goldfish_feature.jpg" width="300" height="191"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4_7.fullscreen"/>
+    </simulatedMetricsContainer>
+</document>
